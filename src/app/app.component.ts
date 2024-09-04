@@ -1,20 +1,24 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { ServerStatusComponent } from './dashboard/server-status/server-status.component';
-import { TrafficComponent } from './dashboard/traffic/traffic.component';
-import { TicketsComponent } from './dashboard/tickets/tickets.component';
-import { DasboardItemComponent } from './dashboard/dasboard-item/dasboard-item.component';
+import { RectComponent } from './rect/rect.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    HeaderComponent,
-    ServerStatusComponent,
-    TrafficComponent,
-    TicketsComponent,
-    DasboardItemComponent,
-  ],
   templateUrl: './app.component.html',
+  imports: [RectComponent, FormsModule],
 })
-export class AppComponent {}
+export class AppComponent {
+
+  rectSize = {
+    width: '100',
+    height: '100',
+  };
+
+  onReset(size: {width: string, height: string}) {
+    this.rectSize = {
+      width: size.width,
+      height: size.height,
+    };
+  }
+}
