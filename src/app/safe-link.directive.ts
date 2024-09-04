@@ -1,11 +1,13 @@
-import { Directive, ElementRef, inject, input, Input } from "@angular/core";
+import { Directive, ElementRef, Host, inject, input, Input } from "@angular/core";
+import { LogDirective } from "./log.directive";
 
 @Directive({
     selector: 'a[appSafeLink]',
     standalone: true,
     host: {
-        '(click)': 'onConfirmLeavePage($event)'
-    }
+        '(click)': 'onConfirmLeavePage($event)',
+    },
+    hostDirectives: [LogDirective]
 })
 export class SafeLinkDirective {
     queryParam = input('myapp', {alias: 'appSafeLink'});
