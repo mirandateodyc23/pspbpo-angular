@@ -49,6 +49,5 @@ export class TaskItemComponent {
     
     this.tasksService.updateTaskStatus(taskId, newStatus);
 
-    console.log(newStatus);
   }
 }
