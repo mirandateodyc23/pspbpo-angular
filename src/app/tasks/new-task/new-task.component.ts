@@ -1,6 +1,7 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, ElementRef, Inject, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TasksService } from '../tasks.service';
+import { TasksServiceToken } from '../../../main';
 
 @Component({
   selector: 'app-new-task',
@@ -14,7 +15,7 @@ export class NewTaskComponent {
 
   // private tasksService: TasksService;
 
-  constructor(private tService: TasksService) {
+  constructor(@Inject(TasksServiceToken) private tService: TasksService ) {
     // this.tasksService = new TasksService();
     // this.tasksService = tService;
   }
