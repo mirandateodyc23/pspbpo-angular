@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { MessagesService } from '../messages.service';
 
 @Component({
@@ -12,11 +12,15 @@ export class MessagesListComponent implements OnInit{
   private messagesServices = inject(MessagesService);
   private cdRef = inject(ChangeDetectorRef);
   messages: string[] = [];
+  private destroyRef = inject(DestroyRef);
 
   ngOnInit() {
-    this.messagesServices.messages$.subscribe((messages) => {
+    const subscription = this.messagesServices.messages$.subscribe((messages) => {
       this.messages = messages;
       this.cdRef.markForCheck();
+    });
+    this.destroyRef.onDestroy(() => {
+      subscription.unsubscribe();
     });
   }
   get debugOutput() {
