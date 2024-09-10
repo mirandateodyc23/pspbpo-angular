@@ -55,7 +55,8 @@ export class AppComponent implements OnInit {
 
     this.customInterval$.subscribe({
       next: (val) => console.log(val),
-      complete: () => console.log('Completed')
+      complete: () => console.log('Completed'),
+      error: (err) => console.log(err)
     });
     const subscription = this.clickCount$.subscribe({
       next: (val) => console.log(`Clicked button ${this.clickCount()} times.`)
