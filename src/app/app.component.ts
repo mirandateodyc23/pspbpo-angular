@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   clickCount$ = toObservable(this.clickCount);
 
   interval$ = interval(1000);
-  intervalSignal = toSignal(this.interval$, { initialValue: 0, manualCleanup: true });
+  intervalSignal = toSignal(this.interval$, { initialValue: 0, manualCleanup: false });
   // interval = signal(0);
   // doubleInterval = computed(() => this.interval() * 2);
 
