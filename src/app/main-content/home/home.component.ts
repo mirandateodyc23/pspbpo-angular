@@ -6,7 +6,7 @@ import { CareersComponent } from '../careers/careers.component';
 import { HomeCareersComponent } from './home-careers/home-careers.component';
 import { PerksComponent } from './perks/perks.component';
 import { OutreachComponent } from './outreach/outreach.component';
-import { HomeSectionComponent } from '../../shared/home-section/home-section.component';
+import { ContainerRowSectionComponent } from '../../shared/container-row-section/container-row-section.component';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +19,7 @@ import { HomeSectionComponent } from '../../shared/home-section/home-section.com
     HomeCareersComponent,
     PerksComponent,
     OutreachComponent,
-    HomeSectionComponent
+    ContainerRowSectionComponent
     
   ],
   templateUrl: './home.component.html',
