@@ -55,6 +55,7 @@ Copyright (c) 2017 retinajs; Licensed MIT */
   var cap = chooseCap(rjs);
   if (src && cap > 1) {
         var newSrc = src.replace(srcReplace, '@' + cap + 'x$1');
+        console.log(newSrc);
         setSourceIfAvailable(image, newSrc);
       }
     }

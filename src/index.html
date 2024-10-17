@@ -12,10 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/js/owl-carousel/owl.carousel.css" />
-  <link rel="stylesheet" href="/js/owl-carousel/owl.transitions.css" />
-  <link rel="stylesheet" href="/rs-plugin/css/settings.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/js/owl-carousel/owl.carousel.css" />
+  <link rel="stylesheet" type="text/css" href="/js/owl-carousel/owl.transitions.css" />
+  <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" />
 
 
   <!-- IE8 support of HTML5 elements and media queries -->
@@ -32,9 +32,11 @@
   <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="theme-color" content="#ffffff" />
   <!--favicon-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body data-spy="scroll">
+<body data-spy="scroll" class="loaded mat-typography">
   <app-root></app-root>
 
   <script src="/js/jquery-1.11.0.js"></script>
@@ -60,7 +62,7 @@
   <script src="/js/twitter/jquery.tweet.js"></script>
   <script src="/js/jquery.sticky.js"></script>
   <script src="/js/unique.js"></script>
-  <script src="/js/retina-2.1.2.js"></script>
+  <!-- <script src="/js/retina-2.1.2.js"></script> -->
   <script src="/js/scrolling-nav.js"></script>
 
 
@@ -74,7 +76,7 @@
    
   <script type="text/javascript">
     $(document).ready(function () {
-      retinajs() // Find all images not previously processed and process them
+      // retinajs() // Find all images not previously processed and process them
       
       // Only enable if the document has a long scroll bar
       // Note the window height + offset

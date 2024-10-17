@@ -1,25 +1,29 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './main-content/home/home.component';
-import { CompanyProfileComponent } from './main-content/company-profile/company-profile.component';
-import { CareersComponent } from './main-content/careers/careers.component';
-import { FaqsComponent } from './main-content/faqs/faqs.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        loadComponent: () => import('./main-content/home/home.component').then(mod => mod.HomeComponent),
+        title: 'Pacific Sea BPO Services, Ltd.',
     },
-
     {
-      path: 'companyprofile',
-      component: CompanyProfileComponent
+        path: 'home',
+        loadComponent: () => import('./main-content/home/home.component').then(mod => mod.HomeComponent),
+        title: 'Pacific Sea BPO Services, Ltd.',
+    },
+    {
+        path: 'companyprofile',
+        loadComponent: () => import('./main-content/company-profile/company-profile.component').then(mod => mod.CompanyProfileComponent),
+        title: 'Company Profile - Pacific Sea BPO Services, Ltd.',
     },
     {
         path: 'careers',
-        component: CareersComponent
+        loadComponent: () => import('./main-content/careers/careers.component').then(mod => mod.CareersComponent),
+        title: 'Careers - Pacific Sea BPO Services, Ltd.',
     },
     {
         path: 'faqs',
-        component: FaqsComponent
+        loadComponent: () => import('./main-content/faqs/faqs.component').then(mod => mod.FaqsComponent),
+        title: 'FAQs - Pacific Sea BPO Services, Ltd.',
     }
   ];

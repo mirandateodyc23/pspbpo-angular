@@ -25,4 +25,6 @@ import { ContainerRowSectionComponent } from '../../shared/container-row-section
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  isOutreachActive: boolean = true;
+}

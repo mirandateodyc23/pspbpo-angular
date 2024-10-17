@@ -1591,8 +1591,6 @@ ul.navbar-nav > li > a:hover {
 	display: none;
 }
 
-
-
 /******************* List Style *****************/
 
 ul.list li {
@@ -10489,6 +10487,7 @@ position: absolute;
 .positions {
 	border: 1px solid #0264aa;
 	border-radius: 1em;
+	margin-bottom: 50px;
 }
 
 .faq-info {
@@ -10507,6 +10506,10 @@ position: absolute;
 
 .faq-info p {
 	margin: 0 0 22px;
+}
+
+.faq-info span.span-accordion {
+	margin: 10px 0 0 0;
 }
 
 .faq-info2 {

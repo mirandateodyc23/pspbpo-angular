@@ -1,0 +1,111 @@
+mat-accordion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 35px;
+}
+
+mat-expansion-panel {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-width: calc(100% - 32px) !important;
+
+  background-color: rgb(var(--v-theme-surface));
+  color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+
+  flex: 1 0 100%;
+  max-width: 100%;
+  position: relative;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+  transition-property: margin-top, border-radius, border, max-width;
+  border-radius: 4px;
+}
+
+mat-expansion-panel.mat-expanded {
+  border-radius: 4px !important;
+  max-width: 100% !important;
+}
+
+mat-expansion-panel:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+mat-expansion-panel-header {
+  margin-bottom: 10px;
+  background-color: #fff !important;
+
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  align-items: center;
+  text-align: start;
+  border-radius: inherit;
+  display: flex;
+  line-height: 1;
+  min-height: 48px;
+  outline: none;
+  padding: 16px 24px;
+  position: relative;
+  transition: min-height .3s cubic-bezier(.4,0,.2,1);
+
+  justify-content: space-between;
+}
+
+.mat-expansion-panel-content {
+
+  padding-top: 10px !important;
+  flex: 1 1 auto;
+  max-width: 100%;
+
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.mat-expansion-panel-header .mat-expansion-panel-header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-expansion-panel-header .mat-icon {
+  transition: color 0.3s ease;
+}
+
+mat-expansion-panel-header[aria-disabled=false]:hover {
+  background-color: #e0e0e0;
+}
+.mat-expansion-panel-header.mat-expanded {
+  background-color: #0264aa !important; /* Change to your desired color */
+
+  
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  min-height: 64px;
+  max-width: calc(100% + 16px);
+}
+
+.mat-expansion-panel-header.mat-expanded{
+  font-size: 0.9em;
+  color: #fff;
+  max-width: 100% !important;
+}
+
+.mat-expansion-panel-header.mat-expanded > mat-panel-description{
+  font-size: 0.9em;
+  color: #fff;
+}
+
+/* mat-panel-title {
+  font-weight: bold;
+  color: #333;
+} */
+
+mat-expansion-panel-header:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}

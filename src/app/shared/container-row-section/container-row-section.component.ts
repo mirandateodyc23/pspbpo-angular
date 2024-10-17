@@ -10,4 +10,9 @@ import { Component, Input } from '@angular/core';
 export class ContainerRowSectionComponent {
   @Input() idname: string = ""; 
   @Input() classname: string = "";
+
+  constructor() {
+  }
+
+  
 }
