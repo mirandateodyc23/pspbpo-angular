@@ -5,7 +5,8 @@
         <div class="loader-section section-right"></div>
     </div>
     <div class="u-all">
-        <app-header />
+        {{ 'home.navbar_title' | translate }}
+        <app-header (changeLang)="switchLang($event)"/>
         <router-outlet />
         <app-footer/>
     </div>

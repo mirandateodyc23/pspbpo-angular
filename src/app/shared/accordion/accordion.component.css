@@ -80,7 +80,7 @@ mat-expansion-panel-header[aria-disabled=false]:hover {
   background-color: #e0e0e0;
 }
 .mat-expansion-panel-header.mat-expanded {
-  background-color: #0264aa !important; /* Change to your desired color */
+  background-color: #007fff !important; /* Change to your desired color */
 
   
   border-bottom-left-radius: 0;

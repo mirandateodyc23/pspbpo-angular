@@ -1,6 +1,5 @@
 
-a.page-scroll.active {
-	background: #0264aa !important;
-	color: #e4e4e4 !important;
+.navbar-nav>li .dropdown-menu>li>a:hover {
+    background: #0264aa;
+    color: #fff
 }
-

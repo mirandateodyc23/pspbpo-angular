@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div id="dash-top" class="sticky-wrapper" style="height: 108px;">
+    <div id="dashboard" class="sticky-wrapper" style="height: 108px;">
         <div class="u-header">
             <div class="container">
                 <div class="uh-logo pull-left">
@@ -27,7 +27,7 @@
                 <nav class="collapse navbar-collapse">
                     <ul id="headernavigation" class="nav navbar-nav pull-right">
                         <li>
-                            <a routerLink="/home" fragment="dash-top" class="page-scroll" aria-current="page" routerLinkActive="active">Home</a>
+                            <a routerLink="/home" fragment="dashboard" class="page-scroll" aria-current="page" routerLinkActive="active">Home</a>
                         </li>
                         <li>
                             <a routerLink="/companyprofile" class="page-scroll" routerLinkActive="active">Company Profile</a>
@@ -62,7 +62,7 @@
                         <div class="sliding-menu-wrapper" style="width: 298px;">
                             <ul id="menu-panel-k53yc" class="menu-panel-root" style="width: 298px;">
                                 <li>
-                                    <a routerLink="/home" fragment="dash-top" class="page-scroll" aria-current="page" routerLinkActive="active">Home</a>
+                                    <a routerLink="/home" fragment="dashboard" class="page-scroll" aria-current="page" routerLinkActive="active">{{ 'home.navbar_title' }}</a>
                                 </li>
                                 <li>
                                     <a routerLink="/companyprofile" class="page-scroll" routerLinkActive="active">Company Profile</a>
@@ -91,22 +91,22 @@
                     <div id="language" class="sliding-menu">
                         <div class="sliding-menu-wrapper" style="width: 298px;">
                             <ul id="menu-panel-5yfc7" class="menu-panel-root" style="width: 298px;">
-                                <li><a href="javascript:void(0);" title="繁體中文"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('cn')" title="繁體中文"><img data-rjs="2"
                                             src="/images/flag-cn.png" style="height: 16px; width: 16px;">
                                         繁體中文</a></li>
-                                <li><a href="javascript:void(0);" title="Malaysia/English"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('bm')" title="Malaysia/English"><img data-rjs="2"
                                             src="/images/flag-my.png" style="height: 16px; width: 16px;">
                                         Malaysia/English</a></li>
-                                <li><a href="javascript:void(0);" title="ภาษาไทย"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('th')" title="ภาษาไทย"><img data-rjs="2"
                                             src="/images/flag-th.png" style="height: 16px; width: 16px;">
                                         ภาษาไทย</a></li>
-                                <li><a href="javascript:void(0);" title="Bhs Indonesia"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('id')" title="Bhs Indonesia"><img data-rjs="2"
                                             src="/images/flag-id.png" style="height: 16px; width: 16px;"> Bhs
                                         Indonesia</a></li>
-                                <li><a href="javascript:void(0);" title="Tiếng Việt"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('vn')" title="Tiếng Việt"><img data-rjs="2"
                                             src="/images/flag-vn.png" style="height: 16px; width: 16px;"> Tiếng
                                         Việt</a></li>
-                                <li><a href="javascript:void(0);" title="Filipino/English"><img data-rjs="2"
+                                <li><a (click)="changeLanguage('en')" title="Filipino/English"><img data-rjs="2"
                                             src="/images/flag-ph.png" style="height: 16px; width: 16px;">
                                         Filipino/English</a></li>
                             </ul>

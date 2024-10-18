@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -10,4 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
 
+  @Output() changeLang = new EventEmitter();
+  changeLanguage(lang: string) {
+    this.changeLang.emit(lang);
+  }
 }
