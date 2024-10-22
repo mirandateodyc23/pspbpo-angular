@@ -11,8 +11,7 @@ export class ContainerRowSectionComponent {
   @Input() idname: string = ""; 
   @Input() classname: string = "";
 
-  constructor() {
-  }
+  constructor() {}
 
   
 }

@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Injectable } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, Injectable, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./main-content/home/home.component";
@@ -13,18 +13,46 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  private destroyRef = inject(DestroyRef);
+  
+  title: string = '';
+  loadedLang: string = 'en';
 
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.loadLanguage();
     this.translate.addLangs(['bm', 'cn','id', 'th','vn', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('th');
+    this.translate.setDefaultLang(this.loadedLang);
+    this.translate.use(this.loadedLang);
+  }
+
+  ngOnInit() {
+    const subscription = this.router.events.subscribe(() => {
+      const route = this.activatedRoute.root; // Get the root activated route
+      this.getTitle(route);
+      this.destroyRef.onDestroy(subscription.unsubscribe);
+    });
+  }
+
+  private getTitle(route: ActivatedRoute) {
+    // Traverse the activated route tree to find the title
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+    this.title = route.snapshot.data['title']; // Set the title
+
   }
 
   switchLang(lang: string) {
-    this.translate.use(lang);
+    this.useLanguage(lang);
   }
 
-  title = 'Pacific Sea BPO Services, Ltd.';
+  loadLanguage(){
+    this.loadedLang = localStorage.getItem('lang') || 'en';
+  }
 
+  useLanguage(lang: string){
+    localStorage.setItem('lang', lang);
+    this.translate.use(lang);
+  }
 }
