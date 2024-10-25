@@ -5,22 +5,27 @@
         "careers": "太平洋外包服务公司",
         "faq": "太平洋外包服务公司",
         "terms": "太平洋外包服务公司",
-        "privacy_policy": "太平洋外包服务公司"
+        "privacy_policy": "太平洋外包服务公司",
+        "language": "cn"
     },
     "home": {
         "navbar_title": "首页",
         "slider_section": {
             "title": [
-                "太平洋外包服务公司"
+                "太平洋外包服务公司",
+                ""
             ],
             "description": [
-                "寻求突出、勇于创新、超越趋势"
+                "寻求突出、勇于创新、超越趋势",
+                ""
             ]
         },
         "welcome_section": {
             "title": "关于我们",
             "descriptions": [
-                "太平洋海外服务外包公司 (\"PSP\") 是一个创新的业务流程外包\"BPO\"提供客户关系管理和技术支持服务，后台数据管理和信息处理服务，信息技术和通讯服务等各种专业服务的在线游戏公司。"
+                "太平洋海外服务外包公司 (\"PSP\") 是一个创新的业务流程外包\"BPO\"提供客户关系管理和技术支持服务，后台数据管理和信息处理服务，信息技术和通讯服务等各种专业服务的在线游戏公司。",
+                "",
+                ""
             ]
         },
         "company_profile": {
@@ -72,7 +77,7 @@
             ]
         },
         "outreach_section": {
-            "title": "<em><span class=\"highlight-color\"></span>企业社会责任</em>",
+            "title": "<em><span class=\"highlight-color\">企业社会责任</span></em>",
             "description": "太平洋在追求利益最大化的同时也非常注重商业道德。因为其相信，商业成功的象征是与成就成比列的回馈社会的能力。",
             "contents": [
                 {
@@ -139,12 +144,43 @@
     },
     "careers": {
         "navbar_title": "诚聘",
-        "title": "Career Opportunities",
+        "title": "<em>Career <span class='highlight-color'>Opportunities</span></em>",
         "description": "Since its establishment in 2009, Pacific Sea BPO Services (PSP) transformed into one of the biggest business process outsourcing companies that deliver top-notched services in marketing, customer support and emerging technologies.",
         "benefits": {
-            "title": "Benefits",
-            "Expat": {},
-            "Local": {}
+            "title": "BENEFITS",
+            "contents": [
+                {
+                    "category": "Expat",
+                    "benefits": [
+                        "First air ticket to the Philippines reimbursed fully by the Company",
+                        "FREE accommodation in Makati City with daily housemaid to clean the condo unit and wash your clothes (also includes utility bills and Wi-Fi paid for by the Company)",
+                        "Daily transport to and from the office",
+                        "Taxes will be absorbed by the Company",
+                        "THIRTY (30) days Annual Leave",
+                        "Probation Increment",
+                        "Bonus payout twice a year",
+                        "Exciting Company Events including our Luxurious Annual Dinner and Overseas Company Trips",
+                        "Annual festival Celebrations and gifts",
+                        "Life, Accidental and Medical Insurance Coverage",
+                        "Gym Memberships",
+                        "Medicine Reimbursement"
+                    ]
+                },
+                {
+                    "category": "Local",
+                    "benefits": [
+                        "FREE in company self-improvement courses",
+                        "Paid Annual Leave",
+                        "Probation Increment",
+                        "Bonus payout twice a year",
+                        "Life, Accidental and Medical Insurance Coverage",
+                        "Exciting Company Events including our Luxurious Annual Dinner and Overseas Company Trips",
+                        "Annual festival celebrations and gifts",
+                        "Gym Memberships",
+                        "Medicine Reimbursement"
+                    ]
+                }
+            ]
         }
     },
     "jobs": {
@@ -2038,11 +2074,11 @@
         ]
     },
     "footer_section": {
-        "terms_of_use": " 使用条款",
+        "terms_of_use": "使用条款",
         "privacy_policy": "隐私策略",
         "contact": "联系我们",
         "follow_us": "关注我们",
         "registered_company": "注册公司",
-        "copyright": "[year] 太平洋海外包服务公司保留所有权利"
+        "copyright": "© {{year}} 太平洋海外包服务公司保留所有权利"
     }
 }

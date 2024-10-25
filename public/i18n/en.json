@@ -6,7 +6,8 @@
         "faq": "FAQS | Pacific Sea BPO Services, Ltd.",
         "terms": "Terms of Use | Pacific Sea BPO Services, Ltd.",
         "privacy_policy": "Privacy Policy | Pacific Sea BPO Services, Ltd.",
-        "resume": "Application | Pacific Sea BPO Services, Ltd."
+        "resume": "Application | Pacific Sea BPO Services, Ltd.",
+        "language": "en"
     },
     "home": {
         "navbar_title": "Home",
@@ -2079,6 +2080,6 @@
         "contact": "Contact",
         "follow_us": "Follow Us",
         "registered_company": "Registered company",
-        "copyright": "[year] Pacific Sea BPO Services, Inc. All rights reserved."
+        "copyright": "© {{year}} Pacific Sea BPO Services, Inc. All rights reserved."
     }
 }

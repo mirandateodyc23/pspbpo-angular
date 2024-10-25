@@ -18,7 +18,7 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5>{{ 'footer_section.contact' | translate }}</h5>
+                <h5 [innerText]="'footer_section.contact' | translate"></h5>
                 <ul class="uf-contactinfo">
                     <li><span class="icon_mail"></span>recruitment&#64;pacificseainvests.com<br></li>
                     <li><span class="icon_phone"></span> +63 (02) 551 6167 / +63 (02) 659 7113</li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5>{{ 'footer_section.follow_us' | translate }}</h5>
+                <h5 [innerText]="'footer_section.follow_us' | translate"></h5>
                 <ul class="uf-contactinfo">
                     <li><a href="https://www.facebook.com/PacificseaBPOServices/" target="blank"
                             style="color:#fff;"><span class="social_facebook"></span>Facebook</a></li>
@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="col-md-3 hidden">
-                <h5>{{ 'footer_section.registered_company' | translate }}</h5>
+                <h5 [innerText]="'footer_section.registered_company' | translate"></h5>
                 <p class="margin_top margin_top_20"><img src="/images/pagcor-logo.png" width="90"
                         height="70"></p>
             </div>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12 alignleft">
-                    <p> © {{ 'footer_section.copyright' | translate | replaceValue:'[year]': year.toString() }}</p>
+                    <p [innerHtml]="translate.instant('footer_section.copyright', { year: year })"></p>
                 </div>
             </div>
         </div>

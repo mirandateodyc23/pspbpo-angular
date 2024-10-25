@@ -1,39 +1,35 @@
 <div class="content-head center">
-    <h3 class="center_divider"><a href="#perks"><em><span class="highlight-color">Perks</span></em></a></h3>
+    <h3 class="center_divider"><a routerLink="" fragment="perks"><em><span class="highlight-color" [innerText]="'home.perks_section.title' | translate"></span></em></a></h3>
 </div>
-<p class="content-sub">We love to give rewards. Take a peek at what our employees
+<p class="content-sub" [innerText]="'home.perks_section.description' | translate">
     enjoy!</p>
 <div id="owl-blog">
     <div class="col-md-3 webdesign up-item item">
-        <div class="upi-thumb"><img src="/images/pages/bonuses.jpg" alt="image"></div>
+        <div class="upi-thumb"><img src="/images/pages/{{ 'home.perks_section.contents.0.img' | translate }}" alt="image"></div>
         <div class="upi-inner">
-            <h4>BONUSES &amp; INCENTIVES</h4>
-            <p>Cash incentives and performance bonuses await those who excel in
-                their craft!</p>
+            <h4 [innerText]="'home.perks_section.contents.0.title' | translate"></h4>
+            <p [innerText]="'home.perks_section.contents.0.description' | translate"></p>
         </div>
     </div>
     <div class="col-md-3 webdesign up-item item">
-        <div class="upi-thumb"><img src="/images/pages/company_trip.jpg" alt="image"></div>
+        <div class="upi-thumb"><img src="/images/pages/{{ 'home.perks_section.contents.1.img' | translate }}" alt="image"></div>
         <div class="upi-inner">
-            <h4>COMPANY TRAVEL</h4>
-            <p>Prepare your passport. The company provides all-expense-paid trips
-                to known destinations!</p>
+            <h4 [innerText]="'home.perks_section.contents.1.title' | translate"></h4>
+            <p [innerText]="'home.perks_section.contents.1.description' | translate"></p>
         </div>
     </div>
     <div class="col-md-3 webdesign up-item item">
-        <div class="upi-thumb"><img src="/images/pages/recreations.jpg" alt="image"></div>
+        <div class="upi-thumb"><img src="/images/pages/{{ 'home.perks_section.contents.2.img' | translate }}" alt="image"></div>
         <div class="upi-inner">
-            <h4>RECREATIONS</h4>
-            <p>Sports fests, fun runs, spas and more! We all need to relax at
-                times!</p>
+            <h4 [innerText]="'home.perks_section.contents.2.title' | translate"></h4>
+            <p [innerText]="'home.perks_section.contents.2.description' | translate"></p>
         </div>
     </div>
     <div class="col-md-3 webdesign up-item item">
-        <div class="upi-thumb"><img src="/images/pages/trainings.jpg" alt="image"></div>
+        <div class="upi-thumb"><img src="/images/pages/{{ 'home.perks_section.contents.3.img' | translate }}" alt="image"></div>
         <div class="upi-inner">
-            <h4>TRAININGS</h4>
-            <p>Learning is a continuous process and here at Pacific Sea, we give
-                time in learning new things.</p>
+            <h4 [innerText]="'home.perks_section.contents.3.title' | translate"></h4>
+            <p [innerText]="'home.perks_section.contents.3.description' | translate"></p>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
 export interface FaqsModel {
-    item: string;
-    content: string;
+    title: string;
+    description: string;
 }

@@ -6,18 +6,23 @@
                 <div class="home-banner-caption">
                     <div class="tp-caption skewfromleft" data-speed="500" data-x="60" data-start="900"
                         data-endspeed="500" data-y="150"
-                        style="font-weight: 700; line-height: 51px; letter-spacing: 1px; color: rgb(2, 100, 170); font-size: 72px;">
-                        PACIFIC SEA</div>
+                        style="font-weight: 700; line-height: 51px; letter-spacing: 1px; color: rgb(2, 100, 170); font-size: 72px;" 
+                        [innerText]="'home.slider_section.title.0' | translate">
+                    </div>
                     <div class="tp-caption skewfromleft" data-speed="500" data-x="60" data-start="900"
                         data-endspeed="500" data-y="210"
-                        style="font-weight: 700; line-height: 51px; letter-spacing: 1px; color: rgb(2, 100, 170); font-size: 54px;">
-                        BPO Services, Inc.</div>
+                        style="font-weight: 700; line-height: 51px; letter-spacing: 1px; color: rgb(2, 100, 170); font-size: 54px;"
+                        [innerText]="'home.slider_section.title.1' | translate">
+                    </div>
                     <div class="tp-caption lfl" data-speed="500" data-start="1100" data-endspeed="500" data-x="60"
                         data-y="270"
                         style="font-weight: 700; font-size: 25px; color: rgb(56, 56, 56); padding-left: 0px; text-align: justify;">
-                        <span style="position: relative; top: 2px;"></span>A spot for the
-                        creative thinkers, strategists <br>and career-driven professionals
-                        <!---->
+                        <span style="position: relative; top: 2px;" 
+                        [innerText]="'home.slider_section.description.0' | translate">
+                            </span>
+                        <br><span style="position: relative; top: 2px;" 
+                        [innerText]="'home.slider_section.description.1' | translate">
+                        </span>
                     </div>
                 </div>
             </li>

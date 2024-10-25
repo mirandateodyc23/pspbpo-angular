@@ -55,7 +55,7 @@
                 class="page-scroll"
                 aria-current="page"
                 routerLinkActive="active"
-                >{{ 'home.navbar_title' | translate }}</a
+                [innerText]="'home.navbar_title' | translate"></a
               >
             </li>
             <li>
@@ -63,23 +63,23 @@
                 routerLink="/companyprofile"
                 class="page-scroll"
                 routerLinkActive="active"
-                >{{ 'company_profile.navbar_title' | translate }}</a
+                [innerText]="'company_profile.navbar_title' | translate"></a
               >
             </li>
             <li>
               <a
                 routerLink="/careers"
                 class="page-scroll"
-                routerLinkActive="active"
-                >{{ 'careers.navbar_title' | translate }}</a
+                routerLinkActive="active" 
+                [innerText]="'careers.navbar_title' | translate"></a
               >
             </li>
             <li>
               <a
                 routerLink="/faqs"
                 class="page-scroll"
-                routerLinkActive="active"
-                >{{ 'faqs.navbar_title' | translate }}</a
+                routerLinkActive="active" 
+                [innerText]="'faqs.navbar_title' | translate"></a
               >
             </li>
             <li>
@@ -88,7 +88,7 @@
                 fragment="outreach"
                 class="page-scroll"
                 aria-current="page"
-                >{{ 'outreach.navbar_title' | translate }}</a
+                [innerText]="'outreach.navbar_title' | translate"></a
               >
             </li>
             <li>
@@ -97,7 +97,7 @@
                 fragment="contact"
                 class="page-scroll"
                 aria-current="page"
-                >{{ 'contact.navbar_title' | translate }}</a
+                [innerText]="'contact.navbar_title' | translate"></a
               >
             </li>
           </ul>
@@ -130,7 +130,7 @@
                     class="page-scroll"
                     aria-current="page"
                     routerLinkActive="active"
-                    >{{ 'home.navbar_title' | translate }}</a
+                    [innerText]="'home.navbar_title' | translate"></a
                   >
                 </li>
                 <li>
@@ -138,7 +138,7 @@
                     routerLink="/companyprofile"
                     class="page-scroll"
                     routerLinkActive="active"
-                    >{{ 'company_profile.navbar_title' | translate }}</a
+                    [innerText]="'company_profile.navbar_title' | translate"></a
                   >
                 </li>
                 <li>
@@ -146,7 +146,7 @@
                     routerLink="/careers"
                     class="page-scroll"
                     routerLinkActive="active"
-                    >{{ 'careers.navbar_title' | translate }}</a
+                    [innerText]="'careers.navbar_title' | translate"></a
                   >
                 </li>
                 <li>
@@ -154,7 +154,7 @@
                     routerLink="/faqs"
                     class="page-scroll"
                     routerLinkActive="active"
-                    >{{ 'faqs.navbar_title' | translate }}</a
+                    [innerText]="'faqs.navbar_title' | translate"></a
                   >
                 </li>
                 <li>
@@ -163,7 +163,7 @@
                     fragment="outreach"
                     class="page-scroll"
                     aria-current="page"
-                    >{{ 'outreach.navbar_title' | translate }}</a
+                    [innerText]="'outreach.navbar_title' | translate"></a
                   >
                 </li>
                 <li>
@@ -172,7 +172,7 @@
                     fragment="contact"
                     class="page-scroll"
                     aria-current="page"
-                    >{{ 'contact.navbar_title' | translate }}</a
+                    [innerText]="'contact.navbar_title' | translate"></a
                   >
                 </li>
               </ul>

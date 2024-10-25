@@ -5,7 +5,8 @@
         "careers": "Careers | Pacific Sea BPO Services, Ltd.",
         "faq": "FAQS | Pacific Sea BPO Services, Ltd.",
         "terms": "Terms of Use | Pacific Sea BPO Services, Ltd.",
-        "privacy_policy": "Privacy Policy | Pacific Sea BPO Services, Ltd."
+        "privacy_policy": "Privacy Policy | Pacific Sea BPO Services, Ltd.",
+        "language": "id"
     },
     "home": {
         "navbar_title": "Home",
@@ -2073,11 +2074,11 @@
         ]
     },
     "footer_section": {
-        "terms_of_use": " SYARAT PENGGUNAAN ",
-        "privacy_policy": " KEBIIJAKAN PRIVASI ",
+        "terms_of_use": "SYARAT PENGGUNAAN ",
+        "privacy_policy": "KEBIIJAKAN PRIVASI ",
         "contact": "KONTAK",
         "follow_us": "IKUTI KAMI",
         "registered_company": "KANTOR TERDAFTAR",
-        "copyright": "[year] Pacific Sea BPO Services, Inc. All rights reserved."
+        "copyright": "© {{year}} Pacific Sea BPO Services, Inc. All rights reserved."
     }
 }

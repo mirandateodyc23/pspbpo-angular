@@ -15,11 +15,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
   private destroyRef = inject(DestroyRef);
+  private router = inject(Router);
+  private activatedRoute = inject(ActivatedRoute);
   
   title: string = '';
   loadedLang: string = 'en';
 
-  constructor(public translate: TranslateService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(public translate: TranslateService) {
     this.loadLanguage();
     this.translate.addLangs(['bm', 'cn','id', 'th','vn', 'en']);
     this.translate.setDefaultLang(this.loadedLang);
@@ -55,4 +57,5 @@ export class AppComponent implements OnInit {
     localStorage.setItem('lang', lang);
     this.translate.use(lang);
   }
+  
 }

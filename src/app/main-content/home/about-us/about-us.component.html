@@ -1,10 +1,8 @@
 <div class="u-welcome animated bounceInDown border_bottom" id="u-welcome">
     <div class="container">
-        <h3><span class="highlight-color">WHAT WE DO</span></h3>
-        <p>Pacific Sea BPO Services (PSP) is a top-notched provider of services that involve
-            online marketing and customer support.</p>
-        <p>We are committed not only in delivering superb customer experience. We also want
-            our employees to enjoy rewarding moments with us.</p>
-        <p><em>Because experience matters.</em></p>
+        <h3><span class="highlight-color" [innerText]="'home.welcome_section.title' | translate"></span></h3>
+        <p [innerText]="'home.welcome_section.descriptions.0' | translate"></p>
+        <p [innerText]="'home.welcome_section.descriptions.1' | translate"></p>
+        <p [innerHtml]="'home.welcome_section.descriptions.2' | translate"></p>
     </div>
 </div>

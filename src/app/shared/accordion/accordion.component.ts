@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './accordion.component.css'
 })
 export class AccordionComponent {
-  @Input() items : {item: string; content: string}[] = [];
+  @Input() items : {title: string; description: string}[] = [];
   expandedIndex = 0;
 
 }

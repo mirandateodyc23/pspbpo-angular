@@ -1,10 +1,10 @@
 <mat-accordion>
-  <mat-expansion-panel *ngFor="let item of items">
+  <mat-expansion-panel *ngFor="let item of items; let i = index" [expanded]="i === 0">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ item.item }}
+        {{ item.title }}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <span>{{ item.content }}</span>
+    <span>{{ item.description }}</span>
   </mat-expansion-panel>
 </mat-accordion>
