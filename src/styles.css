@@ -2089,7 +2089,7 @@ div.owl-theme .owl-controls .owl-page.active span {
 .u-works.services_owl.background_bg_black:after {
 	content: "";
 	height: 1px;
-	background: url(/images/dots-sep.png) repeat-x left top;
+	background: url(assets/images/dots-sep.png) repeat-x left top;
 	left: 0px;
 	margin-top: -41px;
 	position: absolute;
@@ -3330,7 +3330,7 @@ section.like_button.with_text span {
 }
 
 section.like_button .border_bg {
-	background: url("/images/dv2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	background: url("assets/images/dv2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 	height: 28px;
 	margin-bottom: 40px;
 }
@@ -4171,7 +4171,7 @@ section.like_button .button_wrapper:after {
 }
 
 .post_share .content-head {
-	background: url(/images/dv3.png) no-repeat center center;
+	background: url(assets/images/dv3.png) no-repeat center center;
 }
 
 .single-blog-post .content-head h3 {
@@ -4354,7 +4354,7 @@ section.like_button .button_wrapper:after {
 }
 
 .center_divider:before {
-/*   background: url("/images/left_arrow.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+/*   background: url("assets/images/left_arrow.png") no-repeat scroll left center rgba(0, 0, 0, 0);
  */
 	content: "";
 	display: inline-block;
@@ -4383,7 +4383,7 @@ section.like_button .button_wrapper:after {
 }
 
 .center_divider:after {
-/*   background: url("/images/right_arrow.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+/*   background: url("assets/images/right_arrow.png") no-repeat scroll right center rgba(0, 0, 0, 0);
  */
 	content: "";
 	display: inline-block;
@@ -5419,7 +5419,7 @@ h3.center_box_icon.step_circle:hover .step_number {
 }
 
 #dark_home .u-works.background_bg_black .content-head {
-	background: url("/images/dv2.png") no-repeat center center;
+	background: url("assets/images/dv2.png") no-repeat center center;
 }
 
 .background_bg_black .owl_navigation_top .owl-buttons {
@@ -10958,7 +10958,7 @@ position: absolute;
 }
 
 .quote-style2 {
-	background: url(/images/careers.jpg) no-repeat top center fixed;
+	background: url(assets/images/careers.jpg) no-repeat top center fixed;
 	background-size:130% auto;
 	position: relative;
 	padding-bottom: 50px;
@@ -10986,14 +10986,14 @@ position: absolute;
 	z-index: 999;
 	border-radius: 50%;
 	display: block !important;
-	cursor: url('/images/magnify.png'), 
-	url('/images/magnify.png'), none;
+	cursor: url('assets/images/magnify.png'), 
+	url('assets/images/magnify.png'), none;
 	display: block !important;
 }
 
 .loupe:before {
 	content: "";
-	background: url('/images/magnify.png') no-repeat;
+	background: url('assets/images/magnify.png') no-repeat;
 	position: absolute;
 	width: 220px;
 	height: 220px;
@@ -11283,7 +11283,7 @@ position: absolute;
 
 .skills-bar:before {
 	content: "";
-	background: url(/images/skills-bg.png) no-repeat center center;
+	background: url(assets/images/skills-bg.png) no-repeat center center;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -11295,7 +11295,7 @@ position: absolute;
 
 #about-skills-dark .skills-bar:before {
 	content: "";
-	background: url(/images/skills-bg-dark.png) no-repeat center center;
+	background: url(assets/images/skills-bg-dark.png) no-repeat center center;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -11659,7 +11659,7 @@ display:table;
 	content: "";
 	width: 40px;
 	height: 50px;
-	background: #383838 url(/images/dots-sep.png) repeat-x center center;
+	background: #383838 url(assets/images/dots-sep.png) repeat-x center center;
 	position: absolute;
 	right: -20px;
 	top: -9px;
@@ -12407,7 +12407,7 @@ margin-top: 21px;
 	width: 180px !important;
 	opacity: 1 !important;
 	visibility: visible !important;
-	background: #f9f9f9 url(/images/search.png) no-repeat right center;
+	background: #f9f9f9 url(assets/images/search.png) no-repeat right center;
 	background-position: 97% 50%;
 }
 
@@ -12417,7 +12417,7 @@ margin-top: 21px;
 }
 
 .index-head7 .u-topbar.u-topbar-dark .uh-search form:focus {
-	background: #f9f9f9 url(/images/search-hr.png) no-repeat right center;
+	background: #f9f9f9 url(assets/images/search-hr.png) no-repeat right center;
 	background-position: 97% 50%;
 }
 
@@ -12621,7 +12621,7 @@ position:relative !important;
 #showRight.active {
 	width: 27px;
 	height: 27px;
-	background: url(/images/side-menu-close.png) no-repeat;
+	background: url(assets/images/side-menu-close.png) no-repeat;
 	position: fixed;
 	top: 7.5px;
 	right: 30px;
@@ -12634,7 +12634,7 @@ position:relative !important;
 }
 
 .intro-wrap {
-	background: url(/images/bg1.jpg) no-repeat;
+	background: url(assets/images/bg1.jpg) no-repeat;
 	background-size: auto 100%;
 	padding: 220px 0 150px;
 	margin-bottom: 15px;
@@ -12694,7 +12694,7 @@ position:relative !important;
 .lmore {
 	width: 58px;
 	height: 57px;
-	background: url(/images/scroll-ico.png) no-repeat;
+	background: url(assets/images/scroll-ico.png) no-repeat;
 	display: table;
 	margin: 0 auto;
 	position: relative;
@@ -13544,7 +13544,7 @@ a.uh-hidden-bar-toggle:after {
 }
 
 .success-ico {
-	background: url(/images/success.png) no-repeat;
+	background: url(assets/images/success.png) no-repeat;
 	width: 30px;
 	height: 30px;
 	float: left;
@@ -13554,7 +13554,7 @@ a.uh-hidden-bar-toggle:after {
 }
 
 .error-ico {
-	background: url(/images/error.png) no-repeat;
+	background: url(assets/images/error.png) no-repeat;
 	width: 30px;
 	height: 30px;
 	float: left;
@@ -13719,7 +13719,7 @@ margin-right:5px;
 	border-radius:5px;
 	padding:0px 15px;
 	color:#fff;
-	background: rgba(0,0,0,0.15) url(/images/search.png) no-repeat right center;
+	background: rgba(0,0,0,0.15) url(assets/images/search.png) no-repeat right center;
 	background-position:97% 50%;
 	margin-bottom:20px;
 	margin-left:10px;
@@ -13727,7 +13727,7 @@ margin-right:5px;
 }
 
 .menu-search input:focus {
-	background:#353435 url(/images/search-hr.png) no-repeat right center;
+	background:#353435 url(assets/images/search-hr.png) no-repeat right center;
 	background-position:97% 50%;
 	outline:none;
 }
@@ -14218,7 +14218,7 @@ z-index: 100000;
 }
 
 .bt-menu2-open .bt-menu-trigger2 span {
-background:url(/images/side-menu-close.png) no-repeat;
+background:url(assets/images/side-menu-close.png) no-repeat;
 background-color:transparent;
 height: 29px;
 margin-top: 4px;

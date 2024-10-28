@@ -26,22 +26,27 @@
                 "glob": "**/*",
                 "input": "public",
                 "output": "/"
-              }
+              },
+               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/js/owl-carousel/owl.carousel.css",
+              "src/assets/js/owl-carousel/owl.transitions.css",
+              "src/assets/rs-plugin/css/settings.css"
             ],
             "scripts": [],
-            "localize": true,
-            "aot": true
+            "localize": false,
+            "aot": false
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -49,10 +54,23 @@
                   "maximumError": "5kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                    "minify": true,
+                    "inlineCritical": false
+                }
+            }
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                    "minify": true,
+                    "inlineCritical": false
+                }
+            },
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -95,7 +113,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/js/owl-carousel/owl.carousel.css",
+              "src/assets/js/owl-carousel/owl.transitions.css",
+              "src/assets/rs-plugin/css/settings.css"
             ],
             "scripts": []
           }

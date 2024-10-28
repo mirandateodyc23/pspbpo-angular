@@ -1,100 +1,52 @@
 <app-container-row-section idname="terms-of-use" classname="faq-info section-info">
     <div class="content-head center">
-        <h3 class="center_divider"><span><em><span class="highlight-color">Terms</span> of Use</em></span></h3>
+        <h3 class="center_divider" [innerHTML]="'terms_and_conditions.title' | translate"></h3>
     </div>
     <div class="col-md-12">
         <div class="clearfix seprator_top_forty"></div>
-        <h5><span class="highlight-color">ATTENTION: PLEASE READ THESE TERMS CAREFULLY BEFORE USING THIS WEB
-                SITE</span></h5>
+        <h5 [innerHTML]="'terms_and_conditions.attention' | translate"></h5>
         <ul class="list-custom">
             <li>
-                <p class="text-justify"><span class="title">1. <strong>ACCEPTANCE OF TERMS OF
-                            USE.</strong></span><span class="description">By accessing and using this website <a
-                            href="/">(“www.pspbpo.com”)</a> you are deemed to accept these Terms of Use and
-                        Privacy Policy for the use of this website. References herein to ‘our’, ‘we’, ‘our
-                        Company’, or similar are references to Pacific Sea BPO Services Inc.; references to
-                        ‘you’, ‘your’ and similar are reference to the person (natural or otherwise) accessing
-                        this website.</span></p>
+                <p class="text-justify"><span class="title">1. <strong>{{ 'terms_and_conditions.details.0.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.0.description' | translate"></span></p>
             </li>
             <li>
-                <p class="text-justify"><span class="title">2. <strong>USE OF SITE.</strong></span><span
-                        class="description">Pacific Sea BPO Services, Inc.(“PSP”) authorizes you to view and
-                        download the materials at this website only for your personal and non-commercial use,
-                        provided that all copyright and other proprietary notices contained in the original
-                        materials or any copies thereof are retained. Nothing contained in this website shall be
-                        construed as conferring by estoppels, implication or otherwise, any license or right to
-                        any copyright, patent, trademark, intellectual property or other proprietary interest of
-                        PSP or any third party. This website and its contents, including, but not limited to,
-                        website text, logos, graphic images, pictures, audio, video, html code, may not be
-                        copied, reproduced, or distributed in any way or manner, without the prior written
-                        consent of PSP.</span></p>
+                <p class="text-justify"><span class="title">2. <strong>{{ 'terms_and_conditions.details.1.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.1.description' | translate"></span></p>
             </li>
             <li>
-                <p class="text-justify"><span class="title">3. <strong>NO OFFER.</strong></span><span
-                        class="description">The content of this website does not in any way constitute an offer
-                        to sell or solicitation to buy any products or services of the Company or otherwise. The
-                        information found on this site is provided free of charge and for informational purposes
-                        only and does not create a business or professional services relationship between you
-                        and PSP. Links on this site may lead to services or sites not operated by or affiliated
-                        with PSP. PSP makes no warranties or representations as to such other links or sites
-                        that may be found herein. A link to another site or service is not an endorsement of
-                        that site or service. Any use you make of the information provided on this site, or any
-                        site or service linked to by this site, is at your own risk.</span></p>
+                <p class="text-justify"><span class="title">3. <strong>{{ 'terms_and_conditions.details.2.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.2.description' | translate"></span></p>
             </li>
             <li>
-                <p class="text-justify"><span class="title">4. <strong>LINKS TO THIRD PARTY
-                            WEBSITES.</strong></span><span class="description">Links to third party websites are
-                        provided solely as a convenience to you. If you use these links, you will leave this
-                        website and different Terms of Use of use will apply for those websites. Some links to
-                        other websites, even if operated by our Company, may provide content not suitable for
-                        everyone, upon following a link on this website you must read and accept the Terms of
-                        Use of use of the website your are accessing. Our Company has not reviewed third party
-                        websites linked herein and does not control and is not responsible for any of these
-                        websites, or their content. Our company does not adopt statements made in any third
-                        party website.</span></p>
+                <p class="text-justify"><span class="title">4. <strong>{{ 'terms_and_conditions.details.3.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.3.description' | translate"></span></p>
             </li>
             <li>
-                <p class="text-justify"><span class="title">5. <strong>CONTENT DISCLAIMER.</strong></span><span
-                        class="description">Our Company uses reasonable efforts to include accurate, complete
-                        and current (as of the date posted) information on this website, however, our company
-                        does not warrant that the content herein is accurate, complete, current or free of
-                        technical or typographical error. Further, information provided speaks as of its date
-                        and as such may no longer be true. Our Company does not undertake to update information.
-                                It is your responsibility to verify any information before relying on it. Our Company
-                                reserves the right to amend and or update information contained within this website
-                                without prior notice. Some products or services are subject to regulatory or other
-                                restrictions and are not available in all jurisdictions.</span></p>
-                    </li>
-                    <li>
-                        <p class="text-justify"><span class="title">6. <strong>VENUE.</strong></span><span
-                                class="description">PSP operates and maintains this site from Makati City, Philippines
-                                and you agree that the provisions of terms of use and any legal action or proceeding
-                                relating to them and your use of this site shall be governed by the laws of the
-                                Philippines without reference to its choice of law rules. Any suit, action or legal
-                                proceeding arising out of your use of this site shall be brought in the competent courts
-                                in Makati City, Philippines, without regard to where in the world you are located, or
-                                from where in the world you visited this site.</span></p>
-                    </li>
-                    <li>
-                        <p class="text-justify"><span class="title">7. <strong>USER
-                                    RESPONSIBILITIES.</strong></span><span class="description">Access to and use of this
-                                website and the content herein is at the risk of the user. NEITHER PSP NOR ANY PARTY
-                                INVOLVED IN CREATING, PRODUCING OR DELIVERING THIS WEBSITE SHALL BE LIABLE FOR ANY
-                                DIRECT, INCIDENTAL, CONSEQUENTIAL, INDIRECT OR PUNITIVE DAMAGES OR ANY DAMAGES
-                                WHATSOEVER (EVEN IF WE HAVE BEEN NOTIFIED OF THE POSSIBILITY OF THOSE DAMAGES) ARISING
-                                OUT OF YOUR ACCESS, USE OR INABILITY TO USE THIS WEBSITE OR ANY OTHER HYPERLINKED
-                                WEBSITE OR ANY ERRORS OR OMISSIONS IN THE CONTENT THEREOF. You are responsible for
-                                complying with the laws of the jurisdiction from which you accessing this site and you
-                                agree that you will not access or use the information on this site in violation of such
-                                laws.</span></p>
-                    </li>
-                    <li>
-                        <p class="text-justify"><span class="title">8. <strong>COPYRIGHT AND TRADEMARK
-                                    NOTICES.</strong></span><span class="description">All contents of this web site,
-                                unless otherwise noted are Copyright © Pacific Sea BPO Services, Inc., 2024. All rights
-                                reserved.</span></p>
-                    </li>
-                </ul>
-                <div class="clearfix seprator_top_forty"></div>
-            </div>
+                <p class="text-justify"><span class="title">5. <strong>{{ 'terms_and_conditions.details.4.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.4.description' | translate"></span></p>
+            </li>
+            <li>
+                <p class="text-justify"><span class="title">6. <strong>{{ 'terms_and_conditions.details.5.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.5.description' | translate"></span></p>
+            </li>
+            <li>
+                <p class="text-justify"><span class="title">7. <strong>{{ 'terms_and_conditions.details.6.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.6.description' | translate"></span></p>
+            </li>
+            <li>
+                <p class="text-justify"><span class="title">8. <strong>{{ 'terms_and_conditions.details.7.title' |
+                            translate }}</strong></span><span class="description"
+                        [innerHTML]="'terms_and_conditions.details.7.description' | translate"></span></p>
+            </li>
+        </ul>
+        <div class="clearfix seprator_top_forty"></div>
+    </div>
 </app-container-row-section>
