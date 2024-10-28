@@ -14,17 +14,13 @@
     top: 45%;
     left: 32%;
     transform: translate(-50%, -50%);
-    opacity: 0;
 }
 
-/* .loaded .home-banner-caption {
-    animation: captionMove 1.35s;
-    opacity: 1;
-} */
-.home-banner-caption {
+ .loaded .home-banner-caption {
     animation: captionMove 1.35s;
     opacity: 1;
 }
+
 @keyframes captionMove {
   from {
     transform: translate(-115%, -50%); 
