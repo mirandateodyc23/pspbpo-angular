@@ -1,5 +1,6 @@
-<title>{{ title | translate }}</title>
-
+@if (title) {
+    <title>{{ title | translate }}</title>
+}
 <main id="dashboard">
     <div id="loader-wrapper">
         <div id="loader"></div>

@@ -3,11 +3,12 @@ import { ContainerRowSectionComponent } from "../../shared/container-row-section
 import { SectionComponent } from "../../shared/section/section.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-careers',
   standalone: true,
-  imports: [SectionComponent, ContainerRowSectionComponent, TranslateModule, CommonModule],
+  imports: [SectionComponent, ContainerRowSectionComponent, TranslateModule, CommonModule, RouterLink],
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.css'
 })

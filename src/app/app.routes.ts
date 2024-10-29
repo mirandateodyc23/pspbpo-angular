@@ -49,5 +49,9 @@ export const routes: Routes = [
         data: {
             title: "title.terms"
         },
+    },
+    {
+        path: 'jobs/:category/:position/:nationality',
+        loadComponent: () => import('./main-content/jobs/jobs.component').then(mod => mod.JobsComponent)
     }
   ];

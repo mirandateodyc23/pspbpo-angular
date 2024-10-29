@@ -87,8 +87,8 @@ input[type=date], input[type=text]{
 }
 
 body {
-	font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
-	background: #f9f9f9;
+	font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	background: #f9f9f9 !important;
 }
 
 body#dark_home {

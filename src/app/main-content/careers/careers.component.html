@@ -69,7 +69,8 @@
                         <ul class="diamond">
                                 <li *ngFor="let job of content.job_lists">
                                         <a
-                                        [href]="'/jobs/?category='+ content.category.toLowerCase() + '&amp;title=' + job.slug + '&amp;nationality=' + job.market.toLowerCase()">{{
+                                        [routerLink]="['/jobs', content.category.toLowerCase(), job.slug, job.market.toLowerCase()]"
+                                        >{{
                                         job.title }}</a>
                                 </li>
                         </ul>

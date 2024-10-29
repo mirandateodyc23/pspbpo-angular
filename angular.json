@@ -30,8 +30,8 @@
                "src/assets"
             ],
             "styles": [
-              "src/styles.css",
               "src/assets/css/bootstrap.min.css",
+              "src/styles.css",
               "src/assets/js/owl-carousel/owl.carousel.css",
               "src/assets/js/owl-carousel/owl.transitions.css",
               "src/assets/rs-plugin/css/settings.css"
@@ -45,7 +45,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2MB",
+                  "maximumWarning": "1.5MB",
                   "maximumError": "2MB"
                 },
                 {
@@ -61,7 +61,7 @@
                     "minify": true,
                     "inlineCritical": false
                 }
-            }
+              }
             },
             "development": {
               "optimization": {
@@ -113,8 +113,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
               "src/assets/css/bootstrap.min.css",
+              "src/styles.css",
               "src/assets/js/owl-carousel/owl.carousel.css",
               "src/assets/js/owl-carousel/owl.transitions.css",
               "src/assets/rs-plugin/css/settings.css"

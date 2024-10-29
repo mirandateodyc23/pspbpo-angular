@@ -28,14 +28,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   constructor(private route: ActivatedRoute, public translate: TranslateService){}
-
-  ngOnInit() {
-    this.route.fragment.subscribe(fragment => {
-      console.log('Current fragment:', fragment);
-    });
-  }
-  
 
 }
