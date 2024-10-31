@@ -1,24 +1,23 @@
-<title>IT Support Assistant | Pacific Sea BPO Services, Ltd.</title>
+<title>{{ jobContent?.title }} | Pacific Sea BPO Services, Ltd.</title>
 <app-container-row-section idname="" classname="faq-info section-info">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <div>
-                    <h3><span class="highlight-color">IT Support Assistant</span>
+                    <h3><span class="highlight-color">{{ jobContent?.title }}</span>
                     </h3>
                 </div>
                 <table width="100%" border="0" cellspacing="1" cellpadding="0">
                     <div class="clearfix seprator_top_twenty"></div>
                     <tbody>
                         <tr>
-                            <th width="20%"><span
-                                    class="highlight-color">Location: </span></th>
+                            <th width="20%"><span class="highlight-color">Location: </span></th>
                             <td><strong>Makati City, Philippines</strong></td>
                         </tr>
                         <tr>
                             <th><span class="highlight-color">Department:</span>
                             </th>
-                            <td><strong>IT</strong></td>
+                            <td><strong>{{ jobContent?.dept }}</strong></td>
                         </tr>
                         <tr>
                             <th><span class="highlight-color">Work Type: </span>
@@ -31,88 +30,70 @@
                             <td><strong>On-site</strong></td>
                         </tr>
                     </tbody>
-                </table><!---->
+                </table>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">REQUIRED NATIONALITIES:</span>
                 </h4>
                 <ol class="list-custom break-text">
-                    <li>1. Filipino</li>
-                </ol><!---->
+                    <li *ngFor="let market of marketList; let i = index">
+                      {{ i + 1 }}. {{ market }}
+                    </li>
+                  </ol>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">JOB RESPONSIBILITIES:</span>
                 </h4>
                 <div class="clearfix seprator_top_twenty"></div>
                 <ol class="list-custom break-text">
-                    <li>1. Performs first level of desktops, notebooks, printers, scanners and other
-                        PC hardware support <ol class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>2. Perform software &amp; hardware installations <ol
-                            class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>3. Installation &amp; configuration of a company's computer hardware
-                        operating systems and applications <ol class="list-custom break-text mt-2">
-                        </ol>
-                    </li>
-                    <li>4. Maintenance and monitoring of computer networks and systems <ol
-                         class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>5. Diagnosing and solving hardware or software faults <ol
-                            class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>6. Offer daily operations and systems support to personnel <ol
-                         class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>7. Troubleshoot hardware and software issues in person, remotely and/or via
-                        phone <ol class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>8. Performs tasks issued by IT Team Leader and IT Administrator <ol
-                         class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>9. Maintaining IT Office <ol
-                            class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>10. PSP NOC monitoring <ol
-                            class="list-custom break-text mt-2"></ol>
-                    </li>
-                    <li>11. Perform network troubleshooting <ol
-                            class="list-custom break-text mt-2"></ol>
+                    <li *ngFor="let responsibility of jobContent?.responsibilities; let i = index">
+                        {{ i+1 }}. {{ responsibility }}
                     </li>
                 </ol>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">JOB REQUIREMENTS:</span></h4>
                 <ol class="list-custom">
-                    <li>1. At least 3 years of working experience in Desktop support role</li>
-                    <li>2. Performs first level of user support</li>
-                    <li>3. Basic network knowledge</li>
-                    <li>4. Good knowledge on Windows 7 and 10 operating systems</li>
-                    <li>5. Proficient knowledge on Microsoft Office 2010, 2013, Office 365 and Open
-                        Office</li>
-                    <li>6. Excellent in oral and written English, interpersonal, organizational and
-                        presentation skills</li>
-                    <li>7. Can multitask and work even under pressure</li>
-                    <li>8. Knowledge hungry and have willing to learn attitude</li>
-                    <li>9. Customer-oriented, able to work in a dynamic and fast paced environment
-                    </li>
-                    <li>10. Good knowledge in computer hardware (desktop and laptop)</li>
-                    <li>11. Directly reports to IT Team Leader and IT Administrator</li>
-                </ol><!----><!----><!---->
+                    <ng-container *ngIf="jobContent?.requirements?.length > 0; else noRequirements">
+                        <li *ngFor="let requirement of jobContent?.requirements; let i = index">
+                            {{ i+1 }}. {{ requirement }}
+                        </li>
+                    </ng-container>
+                    <ng-template #noRequirements>
+                        <li>
+                            Not available
+                        </li>
+                    </ng-template>
+                    
+                </ol>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">OTHER REQUIREMENTS:</span></h4>
                 <ol class="list-custom">
-                    <li>1. IT Software and Hardware Experience</li>
-                    <li>2. Good analytical in problem solving skills</li>
-                    <li>3. Customer Care Oriented</li>
-                    <li>4. Proactive in providing Technical Support</li>
+                    <ng-container *ngIf="jobContent?.other_requirements?.length > 0; else noOtherRequirements">
+                        <li *ngFor="let other_requirement of jobContent?.other_requirements; let i = index">
+                            {{ i+1 }}. {{ other_requirement }}
+                        </li>
+                    </ng-container>
+                    <ng-template #noOtherRequirements>
+                        <li>
+                            Not available
+                        </li>
+                    </ng-template>
                 </ol>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">EDUCATIONAL BACKGROUND:</span>
                 </h4>
                 <ol class="list-custom">
-                    <li>Candidate must be a graduate of Bachelor's Degree in IT or any other related
-                        field.</li>
+                    <ng-container *ngIf="jobContent?.other_requirements?.length > 0; else noBackground">
+                        <li *ngFor="let other_background of jobContent?.educational_background; let i = index">
+                            {{ i+1 }}. {{ other_background }}
+                        </li>
+                    </ng-container>
+                    <ng-template #noBackground>
+                        <li>
+                            Not available
+                        </li>
+                    </ng-template>
                 </ol>
                 <div class="clearfix seprator_top_thirty"></div>
-                <p><!----></p>
+                <p></p>
             </div>
             <div class="col-md-3">
                 <div data-animated="200" class="price_table">
