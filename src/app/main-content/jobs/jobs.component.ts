@@ -3,18 +3,17 @@ import {
   DestroyRef,
   inject,
   Input,
-  input,
   OnInit,
 } from '@angular/core';
 import { ContainerRowSectionComponent } from '../../shared/container-row-section/container-row-section.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-jobs',
   standalone: true,
-  imports: [ContainerRowSectionComponent, TranslateModule, CommonModule],
+  imports: [ContainerRowSectionComponent, TranslateModule, CommonModule, RouterLink],
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.css',
 })

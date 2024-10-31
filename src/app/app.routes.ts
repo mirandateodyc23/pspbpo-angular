@@ -53,5 +53,9 @@ export const routes: Routes = [
     {
         path: 'jobs/:category/:position/:nationality',
         loadComponent: () => import('./main-content/jobs/jobs.component').then(mod => mod.JobsComponent)
+    },
+    {
+        path: 'resume/:category/:position/:nationality',
+        loadComponent: () => import('./main-content/resume/resume.component').then(mod => mod.ResumeComponent)
     }
   ];

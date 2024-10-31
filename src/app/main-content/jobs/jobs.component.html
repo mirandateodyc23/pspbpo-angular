@@ -44,9 +44,16 @@
                 </h4>
                 <div class="clearfix seprator_top_twenty"></div>
                 <ol class="list-custom break-text">
-                    <li *ngFor="let responsibility of jobContent?.responsibilities; let i = index">
-                        {{ i+1 }}. {{ responsibility }}
-                    </li>
+                    <ng-container *ngIf="jobContent?.responsibilities?.length > 0; else noResponsibilities">
+                        <li *ngFor="let responsibility of jobContent?.responsibilities; let i = index">
+                            {{ i+1 }}. {{ responsibility }}
+                        </li>
+                    </ng-container>
+                    <ng-template #noResponsibilities>
+                        <li>
+                            Not available
+                        </li>
+                    </ng-template>
                 </ol>
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">JOB REQUIREMENTS:</span></h4>
@@ -81,9 +88,9 @@
                 <h4><span class="highlight-color">EDUCATIONAL BACKGROUND:</span>
                 </h4>
                 <ol class="list-custom">
-                    <ng-container *ngIf="jobContent?.other_requirements?.length > 0; else noBackground">
-                        <li *ngFor="let other_background of jobContent?.educational_background; let i = index">
-                            {{ i+1 }}. {{ other_background }}
+                    <ng-container *ngIf="jobContent?.educational_background?.length > 0; else noBackground">
+                        <li *ngFor="let background of jobContent?.educational_background; let i = index">
+                            {{ i+1 }}. {{ background }}
                         </li>
                     </ng-container>
                     <ng-template #noBackground>
@@ -93,7 +100,7 @@
                     </ng-template>
                 </ol>
                 <div class="clearfix seprator_top_thirty"></div>
-                <p></p>
+                <p><a [routerLink]="['/resume', category, position, nationality]" class="btn-medium btn-full-black active">&nbsp; APPLY NOW &nbsp;</a></p>
             </div>
             <div class="col-md-3">
                 <div data-animated="200" class="price_table">
