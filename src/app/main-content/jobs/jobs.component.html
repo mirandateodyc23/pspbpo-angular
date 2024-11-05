@@ -44,7 +44,7 @@
                 </h4>
                 <div class="clearfix seprator_top_twenty"></div>
                 <ol class="list-custom break-text">
-                    <ng-container *ngIf="jobContent?.responsibilities?.length > 0; else noResponsibilities">
+                    <ng-container *ngIf="jobContent?.responsibilities!.length > 0; else noResponsibilities">
                         <li *ngFor="let responsibility of jobContent?.responsibilities; let i = index">
                             {{ i+1 }}. {{ responsibility }}
                         </li>
@@ -58,7 +58,7 @@
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">JOB REQUIREMENTS:</span></h4>
                 <ol class="list-custom">
-                    <ng-container *ngIf="jobContent?.requirements?.length > 0; else noRequirements">
+                    <ng-container *ngIf="jobContent?.requirements!.length > 0; else noRequirements">
                         <li *ngFor="let requirement of jobContent?.requirements; let i = index">
                             {{ i+1 }}. {{ requirement }}
                         </li>
@@ -73,7 +73,7 @@
                 <div class="clearfix seprator_top_twenty"></div>
                 <h4><span class="highlight-color">OTHER REQUIREMENTS:</span></h4>
                 <ol class="list-custom">
-                    <ng-container *ngIf="jobContent?.other_requirements?.length > 0; else noOtherRequirements">
+                    <ng-container *ngIf="jobContent?.other_requirements!.length > 0; else noOtherRequirements">
                         <li *ngFor="let other_requirement of jobContent?.other_requirements; let i = index">
                             {{ i+1 }}. {{ other_requirement }}
                         </li>
@@ -88,7 +88,7 @@
                 <h4><span class="highlight-color">EDUCATIONAL BACKGROUND:</span>
                 </h4>
                 <ol class="list-custom">
-                    <ng-container *ngIf="jobContent?.educational_background?.length > 0; else noBackground">
+                    <ng-container *ngIf="jobContent?.educational_background!.length > 0; else noBackground">
                         <li *ngFor="let background of jobContent?.educational_background; let i = index">
                             {{ i+1 }}. {{ background }}
                         </li>
@@ -101,6 +101,7 @@
                 </ol>
                 <div class="clearfix seprator_top_thirty"></div>
                 <p><a [routerLink]="['/resume', category, position, nationality]" class="btn-medium btn-full-black active">&nbsp; APPLY NOW &nbsp;</a></p>
+                <div class="clearfix seprator_top_thirty"></div>
             </div>
             <div class="col-md-3">
                 <div data-animated="200" class="price_table">

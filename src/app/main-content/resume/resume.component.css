@@ -1,0 +1,15 @@
+form {
+    margin-top: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.forms-container {
+    display: block;
+    padding: 20px 0 60px;
+}
+
+.elevation-5 {
+    box-shadow: 0px 3px 5px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 5px 8px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 14px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12)) !important;
+    background: white;
+}

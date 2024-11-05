@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { StepperResumeComponent } from '../../shared/stepper-resume/stepper-resume.component';
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, StepperResumeComponent],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.css'
 })

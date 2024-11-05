@@ -15142,3 +15142,30 @@ background: none repeat scroll 0% 0% rgba(51, 51, 51, 1);
 	  margin-bottom: 8px;
   }
   /* End Banner Caption Move */
+
+
+ /* Start Resume Form */
+.mat-step-header {
+    pointer-events: none; /* Disable clicks on all step headers */
+}
+
+.mat-step-header.mat-step-header-active {
+    pointer-events: auto; /* Enable clicks on the active step header */
+    cursor: default; /* Keep cursor normal for active step */
+}
+
+.mat-step-header:not(.mat-step-header-active) .mat-step-label {
+    opacity: 0.5; /* Make non-active step labels appear disabled */
+    cursor: not-allowed; /* Change the cursor to indicate non-clickable */
+}
+ /* End Resume Form */
+
+ .mat-step-header > .mat-step-icon-selected {
+    background-color: #0264aa !important;
+}
+
+.mat-mdc-text-field-wrapper, .mdc-text-field, .mdc-text-field--filled {
+    background-color: white !important;
+}
+
+
