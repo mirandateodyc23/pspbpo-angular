@@ -8,7 +8,7 @@
                     <p class="ma-0 mb-2 pa-0 text-required-field">(<span class="text-red">*</span>) Required fields.</p>
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                            <mat-form-field appearance="fill">
+                            <mat-form-field appearance="fill" class="required">
                                 <mat-label>Job Source</mat-label>
                                 <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
                                   <mat-option *ngFor="let source of selectForms.sources" [value]="source">
@@ -21,7 +21,7 @@
                               </mat-form-field>
                         </div>
                         <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                            <mat-form-field appearance="fill" *ngIf="formValues.source?.toLowerCase()!.trim() === 'referral'">
+                            <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'referral'">
                                 <mat-label>Referred by</mat-label>
                                 <input matInput formControlName="refer" [(ngModel)]="formValues.refer" [ngClass]="{'required-input': true}" />
                                 <mat-error *ngIf="validator.refer.$errors.length > 0">
@@ -29,7 +29,7 @@
                                 </mat-error>
                               </mat-form-field>
                               
-                              <mat-form-field appearance="fill" *ngIf="formValues.source?.toLowerCase()!.trim() === 'other'">
+                              <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'other'">
                                 <mat-label>Please specify</mat-label>
                                 <input matInput formControlName="other_job_source" [(ngModel)]="formValues.other_job_source" [ngClass]="{'required-input': true}" />
                                 <mat-error *ngIf="validator.other_job_source.$errors.length > 0">
@@ -37,7 +37,7 @@
                                 </mat-error>
                               </mat-form-field>
                               
-                              <mat-form-field appearance="fill" *ngIf="formValues.source?.toLowerCase()!.trim() === 'social media'">
+                              <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'social media'">
                                 <mat-label>Please specify</mat-label>
                                 <mat-select  formControlName="social_media" [(value)]="formValues.other_job_source" [disabled]="isSocMedDisabled">
                                   <mat-option *ngFor="let social of selectForms.socialsData" [value]="social">
@@ -53,85 +53,71 @@
                     </div>
                     <h4><span class="highlight-color">Position Desired</span></h4>
                     <div class="row">
-                        <div class="col" cols="12" xl="6" lg="6" md="6">
-                            <!-- <mat-form-field appearance="fill">
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                        <mat-form-field appearance="fill" class="required">
                                 <mat-label>Position Applied For</mat-label>
-                                <mat-select [(value)]="tempJobValue" [disabled]="isSelectJobDisabled">
-                                  <mat-option *ngFor="let job of jobs" [value]="job.temp_id">
-                                   
+                                <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
+                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
+                                    {{ source }}
                                   </mat-option>
                                 </mat-select>
-                                <mat-error *ngIf="v$.position_id.$errors.length > 0">
-                                  
-                                </mat-error>
-                              </mat-form-field> -->
+                
+                              </mat-form-field>
                         </div>
-                        <div class="col" cols="12" xl="6" lg="6" md="6">
-                            <!-- <mat-form-field appearance="fill">
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                          <mat-form-field appearance="fill" class="required">
                                 <mat-label>Nationality</mat-label>
-                                <mat-select [(value)]="formValues.market" [disabled]="isDisabledNationality" multiple>
-                                  <mat-option *ngFor="let market of selectMarket" [value]="market">
-                                    
+                                <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
+                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
+                                    {{ source }}
                                   </mat-option>
                                 </mat-select>
-                                <mat-error *ngIf="v$.market.$errors.length > 0">
-                                 
-                                </mat-error>
-                              </mat-form-field> -->
+                              </mat-form-field>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col" xl="4" lg="4" md="6" cols="12">
-                            <!-- <mat-form-field appearance="fill">
-                                <mat-label>Notice Period Required</mat-label>
-                                <mat-select [(value)]="formValues.notice_period" (selectionChange)="onNoticePeriodChange($event)" clearable>
-                                  <mat-option *ngFor="let period of selectForms.notice_period" [value]="period">
-                                   
+                      <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                          <!-- <mat-form-field appearance="fill" class="required">
+                              <mat-label>Notice Period Required</mat-label>
+                              <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
+                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
+                                    {{ source }}
                                   </mat-option>
                                 </mat-select>
-                                <mat-error *ngIf="v$.notice_period.$errors.length > 0">
-                                  
-                                </mat-error>
-                              </mat-form-field> -->
+                            </mat-form-field> -->
                               
                         </div>
-                        <div class="col" xl="4" lg="4" md="6" cols="12">
-                            <!-- <mat-form-field appearance="fill">
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                           <!-- <mat-form-field appearance="fill">
                                 <mat-label>Salary</mat-label>
                                 <input matInput 
-                                       [(ngModel)]="formValues.salary" 
-                                       [ngClass]="{'required-input input-form-salary': true, 'v-field--error': v$.salary.$errors.length > 0}"
+                                       [(ngModel)]="formValues.source" 
                                        [placeholder]="'Enter salary'"
                                        (ngModelChange)="onSalaryChange($event)"
-                                       [currency]="selectedMarket?.toLowerCase() === 'filipino' ? 'PHP' : 'USD'" 
+
                                        max="999999.00">
-                                <mat-error *ngIf="v$.salary.$errors.length > 0">
-                                  
-                                </mat-error>
+                               
                               </mat-form-field>
                             <div class="custom-error-container py-1 px-3 text-red-darken-4">
                                 <div class="v-messages" role="alert" >
-                                    <div class="messages__message">{{ v$.salary.$errors.map(e=> e.$message).length > 0 ? v$.salary.$errors.map(e=> e.$message)[0].toString() : '' }}</div>   
+                                    <div class="messages__message"></div>   
                                 </div>
                             </div> -->
                         </div>
-                        <div class="col" xl="4" lg="4" md="6" cols="12">
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
                             <!-- <mat-form-field appearance="fill">
                                 <mat-label>Date Available to Work</mat-label>
-                                <input matInput [matDatepicker]="picker" 
-                                       [(ngModel)]="formValues.start_date" 
-                                       [ngClass]="{'full-calendar required-input input-form-start-date': true, 'v-field--error': v$.start_date.$errors.length > 0}" 
-                                       [min]="minDate"
-                                       (dateChange)="onDateChange($event)">
-                                <mat-datepicker-toggle matSuffix [for]="picker" *ngIf="showIcon"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                                <mat-error *ngIf="v$.start_date.$errors.length > 0">
-                                  
-                                </mat-error>
+                                <input matInput 
+                                       [(ngModel)]="formValues.source" 
+                                       [placeholder]="'Enter salary'"
+                                       (ngModelChange)="onSalaryChange($event)"
+
+                                       max="999999.00">
+                          
                               </mat-form-field>
                             <div class="custom-error-container py-1 px-3 text-red-darken-4">
                                 <div class="v-messages" role="alert" >
-                                    <div class="messages__message">{{ (v$.start_date.$errors.map(e=> e.$message).length > 0) ? v$.start_date.$errors.map(e=> e.$message)[0] : '' }}</div>   
+                                    <div class="messages__message"></div>   
                                 </div>
                             </div> -->
                         </div>
