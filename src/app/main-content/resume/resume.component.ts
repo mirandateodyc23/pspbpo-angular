@@ -26,7 +26,7 @@ export class ResumeComponent implements OnInit {
     });
     this.destroyRef.onDestroy(() => subscription.unsubscribe());
 
-    console.log(this.category, this.position, this.nationality);
+    // console.log(this.category, this.position, this.nationality);
   }
 
 

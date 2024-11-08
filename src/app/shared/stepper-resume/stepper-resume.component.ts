@@ -1,11 +1,15 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormGroup} from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatSelectChange, MatSelectModule} from '@angular/material/select';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCalendar, MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatOptionModule} from '@angular/material/core';
 // import {MatError} from '@angular/material/core';
 
@@ -21,12 +25,19 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    // MatOptionModule
+    MatAutocompleteModule,
+
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatCalendar
+
+
   ],
   templateUrl: './stepper-resume.component.html',
   styleUrl: './stepper-resume.component.css'
 })
-export class StepperResumeComponent implements OnInit{
+export class StepperResumeComponent implements OnInit {
   private formBuilder = inject(FormBuilder);
   positionDesired!: FormGroup;
   personalInformation!: FormGroup;
@@ -38,22 +49,22 @@ export class StepperResumeComponent implements OnInit{
     source: '', // Initialize with a default value if necessary
     refer: '',
     other_job_source: '',
+    social_media: '',
+    other_social_media: '',
     notice_period: '',
-
+    position: '',
+    nationality: '',
+    salary: '',
+    availability: ''
   };
 
-  validator = {
-    source: {
-      $errors: ['This field is required'] // Replace with your actual validation logic
-    },
-    refer: {
-      $errors: ['This field is required'] // Replace with your actual validation logic
-    },
-    other_job_source : {
-      $errors: ['This field is required'] // Replace with your actual validation logic
-    },
-  };
+  @ViewChild(MatDatepicker) datepicker!: MatDatepicker<any>;
 
+  selectedDate: Date | null = null; // Variable to store selected date
+  startDate: Date = new Date(2023, 0, 1); // Initial date when the calendar opens
+  minDate: Date = new Date(2023, 0, 1);   // Minimum date the user can select
+  maxDate: Date = new Date(2024, 11, 31); // Maximum date the user can select
+  
   isJobSourceDisabled = false; // Control whether the select is disabled
   isSocMedDisabled = false;
   isSelectJobDisabled = false;
@@ -62,12 +73,24 @@ export class StepperResumeComponent implements OnInit{
   selectForms = {
     sources: ['Social Media', 'JobStreet', 'Indeed', 'LinkedIn', 'Referral', 'Advertisement', 'Other'],
     socialsData: ['Facebook', 'Twitter', 'Instagram'],
-    noticePeriod: ['No notice required', 'One week notice', 'Two week notice', 'One month notice', 'Three months notice', 'Negotiable notice']
+    noticePeriod: ['No notice required', 'One week notice', 'Two week notice', 'One month notice', 'Three months notice', 'Negotiable notice'],
+    positions: ['Social Media', 'JobStreet', 'Indeed', 'LinkedIn', 'Referral', 'Advertisement', 'Other'],
+    nationalities: ["Bangladeshi", "Cambodian", "Indonesian", "Japanese", "Korean", "Malaysian/Taiwanese/Chinese (Mandarin Speaking)", "Brazil/Angolan/Portugal (Portuguese Speaking)", "Thai", "Vietnamese"]
   };
 
   ngOnInit() {
     this.positionDesired = this.formBuilder.group({
-      firstCtrl: ['', Validators.required],
+      source: ['', Validators.required],
+      refer: [''],
+      other_job_source: [''],
+      social_media: [''],
+      other_social_media: [''],
+      position: ['', Validators.required],
+      nationality: ['', Validators.required],
+      notice_period: ['', Validators.required],
+      salary: ['', Validators.required],
+      availability: ['', Validators.required],
+
     });
     this.personalInformation = this.formBuilder.group({
       secondCtrl: ['', Validators.required],
@@ -82,7 +105,10 @@ export class StepperResumeComponent implements OnInit{
       fifthCtrl: ['', Validators.required],
     });
   
-    console.log(this.positionDesired);
+    console.log( this.positionDesired.get('refer')?.hasError('required'));
+    console.log( this.positionDesired.get('other_job_source')?.hasError('required'));
+    console.log( this.positionDesired.get('social_media')?.hasError('required'));
+    
   }
 
   onSelectionChange(source: MatSelectChange) {
@@ -92,6 +118,16 @@ export class StepperResumeComponent implements OnInit{
 
   onSalaryChange(salary: MatSelectChange) {
     console.log("Selected source:", salary.value);
+  }
+
+  closeDatepicker = () => {
+    console.log("CLOSED:");
+    this.datepicker.close();
+  };
+
+  openDatepicker() {
+    console.log("OPENED");
+    this.datepicker.open();
   }
 
 }

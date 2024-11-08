@@ -26,4 +26,7 @@
     display: block;
 }
 
-
+mat-datepicker {
+    /* Optionally add a slight transition effect */
+    transition: opacity 0.3s ease;
+  }

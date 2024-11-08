@@ -1,184 +1,228 @@
 <mat-stepper labelPosition="bottom" #stepper>
-    <mat-step [stepControl]="positionDesired">
-      <form [formGroup]="positionDesired">
-        <ng-template matStepLabel>Job Source &amp; Position Desired</ng-template>
-            <!-- Job Source & Position Desired -->
-            <div class="position-desired">
-                <h4><span class="highlight-color">Job Source</span></h4>
-                    <p class="ma-0 mb-2 pa-0 text-required-field">(<span class="text-red">*</span>) Required fields.</p>
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                            <mat-form-field appearance="fill" class="required">
-                                <mat-label>Job Source</mat-label>
-                                <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
-                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
-                                    {{ source }}
-                                  </mat-option>
-                                </mat-select>
-                                <mat-error *ngIf="positionDesired.get('firstCtrl')?.hasError('required') && validator.source.$errors.length > 0">
-                                  {{ validator.source.$errors }}
-                                </mat-error>
-                              </mat-form-field>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                            <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'referral'">
-                                <mat-label>Referred by</mat-label>
-                                <input matInput formControlName="refer" [(ngModel)]="formValues.refer" [ngClass]="{'required-input': true}" />
-                                <mat-error *ngIf="validator.refer.$errors.length > 0">
-                                 
-                                </mat-error>
-                              </mat-form-field>
-                              
-                              <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'other'">
-                                <mat-label>Please specify</mat-label>
-                                <input matInput formControlName="other_job_source" [(ngModel)]="formValues.other_job_source" [ngClass]="{'required-input': true}" />
-                                <mat-error *ngIf="validator.other_job_source.$errors.length > 0">
-                                 
-                                </mat-error>
-                              </mat-form-field>
-                              
-                              <mat-form-field appearance="fill" class="required" *ngIf="formValues.source?.toLowerCase()!.trim() === 'social media'">
-                                <mat-label>Please specify</mat-label>
-                                <mat-select  formControlName="social_media" [(value)]="formValues.other_job_source" [disabled]="isSocMedDisabled">
-                                  <mat-option *ngFor="let social of selectForms.socialsData" [value]="social">
-                                    {{ social }}
-                                  </mat-option>
-                                </mat-select>
-                                <mat-error *ngIf="validator.other_job_source.$errors.length > 0">
-                                 
-                                </mat-error>
-                              </mat-form-field>
-                              
-                        </div>
-                    </div>
-                    <h4><span class="highlight-color">Position Desired</span></h4>
-                    <div class="row">
-                      <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                        <mat-form-field appearance="fill" class="required">
-                                <mat-label>Position Applied For</mat-label>
-                                <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
-                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
-                                    {{ source }}
-                                  </mat-option>
-                                </mat-select>
-                
-                              </mat-form-field>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                          <mat-form-field appearance="fill" class="required">
-                                <mat-label>Nationality</mat-label>
-                                <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
-                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
-                                    {{ source }}
-                                  </mat-option>
-                                </mat-select>
-                              </mat-form-field>
-                        </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                          <!-- <mat-form-field appearance="fill" class="required">
-                              <mat-label>Notice Period Required</mat-label>
-                              <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
-                                  <mat-option *ngFor="let source of selectForms.sources" [value]="source">
-                                    {{ source }}
-                                  </mat-option>
-                                </mat-select>
-                            </mat-form-field> -->
-                              
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                           <!-- <mat-form-field appearance="fill">
-                                <mat-label>Salary</mat-label>
-                                <input matInput 
-                                       [(ngModel)]="formValues.source" 
-                                       [placeholder]="'Enter salary'"
-                                       (ngModelChange)="onSalaryChange($event)"
-
-                                       max="999999.00">
-                               
-                              </mat-form-field>
-                            <div class="custom-error-container py-1 px-3 text-red-darken-4">
-                                <div class="v-messages" role="alert" >
-                                    <div class="messages__message"></div>   
-                                </div>
-                            </div> -->
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                            <!-- <mat-form-field appearance="fill">
-                                <mat-label>Date Available to Work</mat-label>
-                                <input matInput 
-                                       [(ngModel)]="formValues.source" 
-                                       [placeholder]="'Enter salary'"
-                                       (ngModelChange)="onSalaryChange($event)"
-
-                                       max="999999.00">
-                          
-                              </mat-form-field>
-                            <div class="custom-error-container py-1 px-3 text-red-darken-4">
-                                <div class="v-messages" role="alert" >
-                                    <div class="messages__message"></div>   
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-            </div><!-- Personal Information -->
-        <div>
-          <button mat-button matStepperNext [disabled]="positionDesired.invalid">Next</button>
-        </div>
-      </form>
-    </mat-step>
-    
-    <mat-step [stepControl]="personalInformation">
-      <form [formGroup]="personalInformation">
-        <ng-template matStepLabel>Personal Information</ng-template>
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext [disabled]="personalInformation.invalid">Next</button>
-        </div>
-      </form>
-    </mat-step>
-
-    <mat-step [stepControl]="academicLanguage">
-        <form [formGroup]="academicLanguage">
-          <ng-template matStepLabel>Academic &amp; Language</ng-template>
-          <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-          </mat-form-field>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext [disabled]="academicLanguage.invalid">Next</button>
+  <mat-step [stepControl]="positionDesired">
+    <form [formGroup]="positionDesired">
+      <ng-template matStepLabel>Job Source &amp; Position Desired</ng-template>
+      <!-- Job Source & Position Desired -->
+      <div class="position-desired">
+        <h4><span class="highlight-color">Job Source</span></h4>
+        <p class="ma-0 mb-2 pa-0 text-required-field">(<span class="text-red">*</span>) Required fields.</p>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <mat-form-field appearance="fill" class="required">
+              <mat-label>Job Source</mat-label>
+              <mat-select formControlName="source" [(value)]="formValues.source" [disabled]="isJobSourceDisabled"
+                (selectionChange)="onSelectionChange($event)">
+                <mat-option *ngFor="let source of selectForms.sources" [value]="source">
+                  {{ source }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="positionDesired.controls['source'].hasError('required') && positionDesired.controls['source'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
           </div>
-        </form>
-      </mat-step>
-
-      <mat-step [stepControl]="careerCharacter">
-        <form [formGroup]="careerCharacter">
-          <ng-template matStepLabel>Career &amp; Character</ng-template>
-          <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="forthCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-          </mat-form-field>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext [disabled]="careerCharacter.invalid">Next</button>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <mat-form-field appearance="fill" class="required"
+              *ngIf="formValues.source?.toLowerCase()!.trim() === 'referral'">
+              <mat-label>Referred by</mat-label>
+              <input matInput formControlName="refer" [(ngModel)]="formValues.refer"
+                [ngClass]="{'required-input': true}" required />
+              <mat-error *ngIf="positionDesired.controls['refer'].hasError('required') && positionDesired.controls['refer'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="required"
+              *ngIf="formValues.source?.toLowerCase()!.trim() === 'other'">
+              <mat-label>Please specify</mat-label>
+              <input matInput formControlName="other_job_source" [(ngModel)]="formValues.other_job_source"
+                [ngClass]="{'required-input': true}" required />
+              <mat-error *ngIf="positionDesired.controls['other_job_source'].hasError('required') && positionDesired.controls['other_job_source'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="required"
+              *ngIf="formValues.source?.toLowerCase()!.trim() === 'social media'">
+              <mat-label>Please specify</mat-label>
+              <input matInput [matAutocomplete]="auto" formControlName="social_media" required>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let social of selectForms.socialsData" [value]="social">
+                  {{ social }}
+                </mat-option>
+              </mat-autocomplete>
+              <mat-error *ngIf="positionDesired.controls['social_media'].hasError('required') && positionDesired.controls['social_media'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
           </div>
-        </form>
-      </mat-step>
-      
-    
-    <mat-step>
-      <ng-template matStepLabel>Resume &amp; Image</ng-template>
-      <p>You are now done.</p>
+        </div>
+        <h4><span class="highlight-color">Position Desired</span></h4>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <mat-form-field appearance="fill" class="required">
+              <mat-label>Position Applied For</mat-label>
+              <mat-select formControlName="position" [(value)]="formValues.position" [disabled]="isJobSourceDisabled"
+                (selectionChange)="onSelectionChange($event)">
+                <mat-option *ngFor="let position of selectForms.positions" [value]="position">
+                  {{ position }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="positionDesired.controls['position'].hasError('required') && positionDesired.controls['position'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <mat-form-field appearance="fill" class="required">
+              <mat-label>Nationality</mat-label>
+              <input matInput [matAutocomplete]="auto" formControlName="nationality" required>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let nationality of selectForms.nationalities" [value]="nationality">
+                  {{ nationality }}
+                </mat-option>
+                </mat-autocomplete>
+              <mat-error *ngIf="positionDesired.controls['nationality'].hasError('required') && positionDesired.controls['nationality'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <mat-form-field appearance="fill" class="required">
+              <mat-label>Notice Period Required</mat-label>
+              <mat-select formControlName="notice_period" [(value)]="formValues.notice_period"
+                [disabled]="isJobSourceDisabled" (selectionChange)="onSelectionChange($event)">
+                <mat-option *ngFor="let period of selectForms.noticePeriod" [value]="period">
+                  {{ period }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="positionDesired.controls['notice_period'].hasError('required') && positionDesired.controls['notice_period'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <mat-form-field appearance="fill" class="required">
+              <mat-label>Salary</mat-label>
+              <input matInput formControlName="salary" [placeholder]="'Enter expected salary'" max="999999.00" type="number"
+                step="0.01" min="0">
+              <mat-error *ngIf="positionDesired.controls['salary'].hasError('required') && positionDesired.controls['salary'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <!-- <mat-form-field appearance="fill" class="required">
+              <mat-label>Date Available to Work</mat-label>
+              <input matInput formControlName="availability" [placeholder]="'Enter date'" max="999999.00">
+              <mat-error *ngIf="positionDesired.controls['salary'].hasError('required') && positionDesired.controls['salary'].touched">
+                This field is required.
+              </mat-error>
+            </mat-form-field> -->
+            <mat-form-field appearance="fill">
+              <input
+                matInput
+                formControlName="availability"
+                [matDatepicker]="datepicker"
+                [(ngModel)]="selectedDate"
+                placeholder="Select a date"
+                (mouseenter)="datepicker.open()"
+                (mouseleave)="datepicker.close()"
+              />
+              <mat-datepicker 
+                #datepicker
+                >
+              </mat-datepicker>
+            </mat-form-field>
+
+            <!-- <mat-form-field appearance="fill">
+              <mat-label>Choose a date</mat-label>
+              <input matInput formControlName="availability" [(ngModel)]="selectedDate" placeholder="Select a date">
+            </mat-form-field>
+            
+            <mat-calendar 
+              [(selected)]="selectedDate" 
+              [startAt]="startDate" 
+              [minDate]="minDate" 
+              [maxDate]="maxDate">
+            </mat-calendar> -->
+
+            <!-- <mat-form-field appearance="fill">
+              <mat-label>Choose a date</mat-label>
+              <input
+                matInput
+                formControlName="availability"
+                [matDatepicker]="datepicker"
+                [(ngModel)]="selectedDate"
+                placeholder="Select a date"
+
+                (mouseleave)="closeDatepicker()"
+              />
+              <mat-datepicker #datepicker></mat-datepicker>
+            </mat-form-field> -->
+            
+            
+
+            
+            
+          </div>
+        </div>
+      </div><!-- Personal Information -->
+      <div>
+        <button mat-button matStepperNext [disabled]="positionDesired.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="personalInformation">
+    <form [formGroup]="personalInformation">
+      <ng-template matStepLabel>Personal Information</ng-template>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button matStepperNext [disabled]="personalInformation.invalid">Next</button>
       </div>
-    </mat-step>
-  </mat-stepper>
-  
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="academicLanguage">
+    <form [formGroup]="academicLanguage">
+      <ng-template matStepLabel>Academic &amp; Language</ng-template>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="thirdCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext [disabled]="academicLanguage.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="careerCharacter">
+    <form [formGroup]="careerCharacter">
+      <ng-template matStepLabel>Career &amp; Character</ng-template>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="forthCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext [disabled]="careerCharacter.invalid">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>Resume &amp; Image</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
